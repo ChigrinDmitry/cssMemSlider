@@ -9,46 +9,47 @@
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <div class="content">
+    <div class="container">
+        <div class="content">
+            <input type="radio" name="point" id="image1" checked>
+            <input type="radio" name="point" id="image2">
+            <input type="radio" name="point" id="image3">
+            <input type="radio" name="point" id="image4">
+            <input type="radio" name="point" id="image5">
+            
+            <div class="slider">
+                <div class="slides slide1">
+                    <img src="assets/mem-frontend.png" alt="meme about frontend development">
+                </div>
+                <div class="slides slide2">
+                    <img src="assets/mem-neuroscience.jpeg" alt="meme about cats and neuroscience">
+                </div>
+                <div class="slides slide3">
+                    <img src="assets/mem-floppa.jpeg" alt="meme about Big Cat Floppa">
+                </div>
+                <div class="slides slide4">
+                    <img src="assets/mem-scientist.jpeg" alt="meme about computer science">
+                </div>
+                <div class="slides slide5">
+                    <img src="assets/mem-star-wars.jpeg" alt="meme about the Dark side of the Force">
+                </div>
+            </div>
 
-        <input type="radio" name="point" id="image1" checked>
-        <input type="radio" name="point" id="image2">
-        <input type="radio" name="point" id="image3">
-        <input type="radio" name="point" id="image4">
-        <input type="radio" name="point" id="image5">
-        
-        <div class="slider">
-            <div class="slides slide1">
-                <img src="assets/mem-frontend.png" alt="meme about frontend development">
+            <div class="text">
+                <p class="slide1-description">Meme about frontend development</p>
+                <p class="slide2-description">Meme about cats and neuroscience</p>
+                <p class="slide3-description">Meme about Big Cat Floppa</p>
+                <p class="slide4-description">Meme about computer science</p>
+                <p class="slide5-description">Meme about the Dark side of the Force</p>
             </div>
-            <div class="slides slide2">
-                <img src="assets/mem-neuroscience.jpeg" alt="meme about cats and neuroscience">
-            </div>
-            <div class="slides slide3">
-                <img src="assets/mem-floppa.jpeg" alt="meme about Big Cat Floppa">
-            </div>
-            <div class="slides slide4">
-                <img src="assets/mem-scientist.jpeg" alt="meme about computer science">
-            </div>
-            <div class="slides slide5">
-                <img src="assets/mem-star-wars.jpeg" alt="meme about the Dark side of the Force">
-            </div>
-        </div>
 
-        <div class="text">
-            <p class="slide1-description">Meme about frontend development</p>
-            <p class="slide2-description">Meme about cats and neuroscience</p>
-            <p class="slide3-description">Meme about Big Cat Floppa</p>
-            <p class="slide4-description">Meme about computer science</p>
-            <p class="slide5-description">Meme about the Dark side of the Force</p>
-        </div>
-
-        <div class="controls">
-            <label for="image1"></label>
-            <label for="image2"></label>
-            <label for="image3"></label>
-            <label for="image4"></label>
-            <label for="image5"></label>
+            <div class="controls">
+                <label class="control-button" for="image1"></label>
+                <label for="image2"></label>
+                <label for="image3"></label>
+                <label for="image4"></label>
+                <label for="image5"></label>
+            </div>
         </div>
     </div>
 </body>

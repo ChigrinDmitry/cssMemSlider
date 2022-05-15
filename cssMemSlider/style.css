@@ -1,7 +1,76 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   margin: 0;
+  background-color: wheat;
+}
+
+input {
+  display: none;
+}
+
+.container {
+  display: block;
+  margin: 5% auto;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: lightgray;
+}
+
+.content {
+  display: grid;
+  overflow: hidden;  
+  width: 80%;
+  max-width: 35rem;
+  height: 100%;
+  max-height: 50vh;;
+  margin: 0 auto;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    'slider slider slider slider slider'
+    'slider slider slider slider slider'
+    'slider slider slider slider slider'
+    'text . . controls';
+  row-gap: 2rem;
+}
+
+.slider {
+  display: flex;
+  box-sizing: border-box;
+  width: 500%;
+  height: 100%;
+  grid-area: slider;
+}
+
+.slides {
+  width: 20%;
+}
+
+.slider .slides {
+  list-style: none;
+}
+
+.slides img {
+width: 100%;
+height: 100%;
+}
+
+.text {
+  width: 2000%;
+  display: flex;
+  justify-self: start;
+  grid-area: text;
+}
+
+.controls {
+  background-color: black;
+  justify-self: end;
+  display: flex;
+  grid-area: controls;
 }
