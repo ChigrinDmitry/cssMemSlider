@@ -16,23 +16,26 @@ input {
 .container {
   display: block;
   margin: 5% auto;
+  padding: 1rem;
   position: relative;
   width: 100%;
   height: 100vh;
-  background-color: lightgray;
+  background-color: wheat;
 }
 
 .content {
   display: grid;
   overflow: hidden;  
-  width: 80%;
+  width: 100%;
   max-width: 35rem;
   height: 100%;
-  max-height: 50vh;;
+  max-height: 50vh;
   margin: 0 auto;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
   grid-template-areas:
+    'slider slider slider slider slider'
+    'slider slider slider slider slider'
     'slider slider slider slider slider'
     'slider slider slider slider slider'
     'slider slider slider slider slider'
@@ -50,6 +53,7 @@ input {
 
 .slides {
   width: 20%;
+  transition: 0.5s ease-in-out;
 }
 
 .slider .slides {
@@ -62,9 +66,10 @@ height: 100%;
 }
 
 .text {
-  width: 2000%;
+  width: 2500%;
   display: flex;
   justify-self: start;
+  align-items: center;
   grid-area: text;
 }
 
@@ -74,31 +79,35 @@ height: 100%;
   font-size: 1rem;
   width: 20%;
   padding: 0rem;
+  transition: all 0.3s ease-in-out;
 }
 
 .controls {
-  background-color: black;
   justify-self: end;
   display: flex;
+  align-items: center;
   grid-area: controls;
 }
 
 .control-button {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
   box-sizing: border-box;
   cursor: pointer;
+  width: 2rem;
+  height: 1rem;
 }
 
 
 .label-container {
   display: block;
-  width: 0.7rem;
-  height: 0.7rem;
-  background-color: rgb(153, 153, 245);
+  width: 1rem;
+  height: 1rem;
+  background-color: grey;
   border-radius: 50%;
-  border: 0.1rem solid rgb(23, 23, 139);
+  border: 0.1rem solid grey;
+;
 }
 
 #image1:checked ~ .slider .slide1,
@@ -124,4 +133,50 @@ height: 100%;
 #image5:checked ~ .slider .slide1,
 #image5:checked ~ .text .slide1-description {
   margin-left: -80%;
+}
+
+#image1:checked ~ .controls .control-button1 .label-container,
+#image2:checked ~ .controls .control-button2 .label-container,
+#image3:checked ~ .controls .control-button3 .label-container,
+#image4:checked ~ .controls .control-button4 .label-container,
+#image5:checked ~ .controls .control-button5 .label-container {
+  border-color: white;
+  background-color: white;
+}
+
+.control-button:hover .label-container,
+#image1:checked ~ .controls .control-button1:hover .label-container,
+#image2:checked ~ .controls .control-button2:hover .label-container,
+#image3:checked ~ .controls .control-button3:hover .label-container,
+#image4:checked ~ .controls .control-button4:hover .label-container,
+#image5:checked ~ .controls .control-button5:hover .label-container {
+  border-color: lightseagreen;
+  background-color: lightseagreen;
+}
+
+.control-button:active .label-container,
+#image1:checked ~ .controls .control-button1:active .label-container,
+#image2:checked ~ .controls .control-button2:active .label-container,
+#image3:checked ~ .controls .control-button3:active .label-container,
+#image4:checked ~ .controls .control-button4:active .label-container,
+#image5:checked ~ .controls .control-button5:active .label-container {
+  border-color: white;
+  background-color: white;
+}
+
+@media (max-width: 600px) {
+  .content {
+    max-width: 25rem;
+    grid-template-rows: 1fr 1fr 0.3fr 0.2fr 0.1fr;
+    grid-template-areas: 
+    'slider slider slider slider slider'
+    'slider slider slider slider slider'
+    'slider slider slider slider slider'    
+    'controls controls controls controls controls'
+    'text text text text text';
+  }
+
+  .controls {
+    justify-self: center;
+  }
 }
