@@ -29,7 +29,7 @@ input {
   width: 100%;
   max-width: 35rem;
   height: 100%;
-  max-height: 50vh;
+  max-height: 60vh;
   margin: 0 auto;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
@@ -40,7 +40,7 @@ input {
     'slider slider slider slider slider'
     'slider slider slider slider slider'
     'text . . . controls';
-  row-gap: 2rem;
+  row-gap: 1rem;
 }
 
 .slider {
@@ -75,7 +75,7 @@ height: 100%;
 
 .slide-description {
   font-family: Arial, Helvetica, sans-serif;
-  font-style: bold;
+  font-style:normal;
   font-size: 1rem;
   width: 20%;
   padding: 0rem;
@@ -96,7 +96,7 @@ height: 100%;
   box-sizing: border-box;
   cursor: pointer;
   width: 2rem;
-  height: 1rem;
+  height: 2rem;
 }
 
 
@@ -140,8 +140,8 @@ height: 100%;
 #image3:checked ~ .controls .control-button3 .label-container,
 #image4:checked ~ .controls .control-button4 .label-container,
 #image5:checked ~ .controls .control-button5 .label-container {
-  border-color: white;
-  background-color: white;
+  border-color: black;
+  background-color: black;
 }
 
 .control-button:hover .label-container,
@@ -150,8 +150,8 @@ height: 100%;
 #image3:checked ~ .controls .control-button3:hover .label-container,
 #image4:checked ~ .controls .control-button4:hover .label-container,
 #image5:checked ~ .controls .control-button5:hover .label-container {
-  border-color: lightseagreen;
-  background-color: lightseagreen;
+  border-color: white;
+  background-color: white;
 }
 
 .control-button:active .label-container,
@@ -160,8 +160,8 @@ height: 100%;
 #image3:checked ~ .controls .control-button3:active .label-container,
 #image4:checked ~ .controls .control-button4:active .label-container,
 #image5:checked ~ .controls .control-button5:active .label-container {
-  border-color: white;
-  background-color: white;
+  border-color: lightcoral;
+  background-color: lightcoral;
 }
 
 @media (max-width: 600px) {
