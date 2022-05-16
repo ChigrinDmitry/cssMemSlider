@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Mem Slider</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <input type="radio" name="point" id="image1" checked>
+            <input type="radio" name="point" id="image2">
+            <input type="radio" name="point" id="image3">
+            <input type="radio" name="point" id="image4">
+            <input type="radio" name="point" id="image5">
+            
+            <div class="slider">
+                <div class="slides slide1">
+                    <img src="assets/mem-frontend.png" alt="meme about frontend development">
+                </div>
+                <div class="slides slide2">
+                    <img src="assets/mem-neuroscience.jpeg" alt="meme about cats and neuroscience">
+                </div>
+                <div class="slides slide3">
+                    <img src="assets/mem-floppa.jpeg" alt="meme about Big Cat Floppa">
+                </div>
+                <div class="slides slide4">
+                    <img src="assets/mem-scientist.jpeg" alt="meme about computer science">
+                </div>
+                <div class="slides slide5">
+                    <img src="assets/mem-star-wars.jpeg" alt="meme about the Dark side of the Force">
+                </div>
+            </div>
+
+            <div class="text">
+                <p class="slide-description slide1-description">Meme about frontend development</p>
+                <p class="slide-description slide2-description">Meme about cats and neuroscience</p>
+                <p class="slide-description slide3-description">Meme about Big Cat Floppa</p>
+                <p class="slide-description slide4-description">Meme about computer science</p>
+                <p class="slide-description slide5-description">Meme about the Dark side of the Force</p>
+            </div>
+
+            <div class="controls">
+                <label class="control-button control-button1" for="image1">
+                    <span class="label-container"></span>
+                </label>
+                <label class="control-button control-button2" for="image2">
+                    <span class="label-container"></span>
+                </label>
+                <label class="control-button control-button3" for="image3">
+                    <span class="label-container"></span>
+                </label>
+                <label class="control-button control-button4" for="image4">
+                    <span class="label-container"></span>
+                </label>
+                <label class="control-button control-button5" for="image5">
+                    <span class="label-container"></span>
+                </label>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
